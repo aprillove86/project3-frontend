@@ -3,7 +3,10 @@ import React from 'react'
 
 const Nav = (props) => {
     return (
+               
+      
         <div className='navigation'>
+                <body>$(fetch)</body>
             <Link to='/about'>
                 <div>About</div>
             </Link>
