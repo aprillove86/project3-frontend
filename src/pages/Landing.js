@@ -24,19 +24,23 @@ function Landing(props) {
             img: '',
         });
     
-    return props.sneakers.map((sneaker) => (
-            <div key={sneaker._id} className='sneaker'>
-                <Link to={`/sneakers/${sneaker._id}`}>
-                    <h1>{sneaker.name}</h1>
-                    <h2>{sneaker.brand}</h2>
-                    <h2>{sneaker.size}</h2>
-                    <h2>{sneaker.img}</h2>
-                </Link>
-            </div>
-        ));
     };
     return (
         <section>
+            {
+
+            props.sneakers.map((sneaker) => (
+              <div key={sneaker._id} className='sneaker'>
+                 <Link to={`/sneakers/${sneaker._id}`}>
+                  <h1>{sneaker.name}</h1>
+                  <h2>{sneaker.brand}</h2>
+                  <h2>{sneaker.size}</h2>
+                  <img src={sneaker.img}/>
+                 </Link>
+              </div>
+
+            ))}
+
             <form style={{marginTop: '7rem'}} onSubmit={handleSubmit}>
                 <input
                     type='text'

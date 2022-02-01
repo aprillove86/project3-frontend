@@ -22,15 +22,14 @@ function Sneaker(props) {
         props.deleteSneakers(id);
         props.history.push('/');
     }
-    return props.sneakers.map((sneaker) => (
+    return  (
         <div className='sneaker'>
             <h1>{sneaker.name}</h1>
             <h2>{sneaker.brand}</h2>
             <h2>{sneaker.size}</h2>
-            {
-                sneaker.image && <img src={sneaker.image}
+            <img src={sneaker.img}
                  alt={sneaker.name} />
-            }
+            
             <button id='delete' onClick={handleClick}>
                 Reward Claimed
             </button>
@@ -50,6 +49,6 @@ function Sneaker(props) {
                
             </form>
         </div>
-    ))
+    );
 }
 export default Sneaker;

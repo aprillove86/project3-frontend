@@ -7,7 +7,7 @@ import Sneaker from '../pages/Sneaker';
 function Main(props) {
     const [sneakers, setSneakers] = useState([]);
     //use the heroku url that's linked to the backend
-    const URL = 'https://project3-backend-done.herokuapp.com/sneakers';
+    const URL = 'https://project3-backend-done.herokuapp.com/sneakers/';
     //get all sneakers
     const getSneakers = async () => {
         const response = await fetch(URL);
@@ -16,7 +16,7 @@ function Main(props) {
         setSneakers(data);
     };
 
-    const createSneakers = async (sneaker) => {
+    const createSneaker = async (sneaker) => {
         await fetch(URL, {
             method: 'POST',
             headers: { 'Content-Type': 'Application/json' },
@@ -34,14 +34,14 @@ function Main(props) {
         getSneakers();
     };
 
-    const deleteSneakers = async (id) => {
+    const deleteSneaker = async (id) => {
         await fetch(URL + id, {
             method: 'Delete'
         })
         getSneakers();
     };
         useEffect(() => getSneakers(), []);
-
+        console.log(sneakers)
         return (
             <main>
                 <Switch>
@@ -49,7 +49,11 @@ function Main(props) {
                         <About />
                     </Route>
                     <Route exact path='/sneakers'>
-                        <Landing />
+                        <Landing 
+                         sneakers={sneakers}
+                         createSneaker={createSneaker}
+                         deleteSneaker={deleteSneaker}
+                        />
                     </Route> 
                     <Route path='/sneakers/:id' render={(props) => (
                          <Sneaker 
