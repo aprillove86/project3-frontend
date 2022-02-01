@@ -8,10 +8,10 @@ const Nav = (props) => {
                 <div>About</div>
             </Link>
             <Link to='/sneakers'>
-                <div>Landing</div>
+                <div>Trophy Case</div>
             </Link>
             <Link to='/sneakers/._id'>
-                <div>Rewards</div>
+                <div>Claim a Reward</div>
             </Link>
         </div>
 
