@@ -13,7 +13,7 @@ const Nav = (props) => {
             <Link to='/sneakers'>
                 <div>Trophy Case</div>
             </Link>
-            <Link to='/sneakers/'>
+            <Link to='/'>
                 <div>Claim a Reward</div>
             </Link>
         </div>
