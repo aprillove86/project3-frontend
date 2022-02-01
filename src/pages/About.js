@@ -19,7 +19,7 @@ const About = (props) => {
                 monthly winners get their requested items. 
             </p>
 
-            <footer>Fashion != Frivolity</footer>
+            <p>Fashion != Frivolity</p>
             </div>
     )
     }

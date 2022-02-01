@@ -6,14 +6,14 @@ const Nav = (props) => {
                
       
         <div className='navigation'>
-                <body>$(fetch)</body>
+                <h3>$(fetch)</h3>
             <Link to='/about'>
                 <div>About</div>
             </Link>
             <Link to='/sneakers'>
                 <div>Trophy Case</div>
             </Link>
-            <Link to='/sneakers/._id'>
+            <Link to='/sneakers/'>
                 <div>Claim a Reward</div>
             </Link>
         </div>
