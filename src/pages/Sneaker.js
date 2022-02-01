@@ -28,7 +28,7 @@ function Sneaker(props) {
             <h2>{sneaker.brand}</h2>
             <h2>{sneaker.size}</h2>
             <img src={sneaker.img}
-                 alt={sneaker.name} />
+                 alt={sneaker.name} class='show-image' />
             
             <button id='delete' onClick={handleClick}>
                 Reward Claimed
@@ -41,7 +41,7 @@ function Sneaker(props) {
                 <br />
                                
                 <input type='text' name='Image'
-                placeholder='ImageUrl' value={editSneaker.img}
+                placeholder='url' value={editSneaker.img}
                 onChange={handleChange}
                 />
                 <br />

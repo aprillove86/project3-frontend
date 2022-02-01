@@ -35,7 +35,7 @@ function Rewards(props) {
                   <h1>{sneaker.name}</h1>
                   <h2>{sneaker.brand}</h2>
                   <h2>{sneaker.size}</h2>
-                  <img src={sneaker.img} alt={sneaker.name}/>
+                  <img src={sneaker.img} alt={sneaker.name} class='image'/>
                  </Link>
               </div>
 
