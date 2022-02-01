@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Route, Switch } from 'react-router-dom';
 import About from '../pages/About';
-import Landing from '../pages/Landing';
+import Rewards from '../pages/Rewards';
 import Sneaker from '../pages/Sneaker';
 
 function Main(props) {
@@ -25,16 +25,7 @@ function Main(props) {
         getSneakers();
     };
 
-    const updateSneakers = async (sneaker, id) => {
-        await fetch(URL + id, {
-            method: "PUT",
-            headers: { "Content-Type": 'Application/json'},
-            body: JSON.stringify(sneaker)
-        });
-        getSneakers();
-    };
-
-    const deleteSneaker = async (id) => {
+        const deleteSneaker = async (id) => {
         await fetch(URL + id, {
             method: 'Delete'
         })
@@ -42,6 +33,7 @@ function Main(props) {
     };
         useEffect(() => getSneakers(), []);
         console.log(sneakers)
+        
         return (
             <main>
                 <Switch>
@@ -49,7 +41,7 @@ function Main(props) {
                         <About />
                     </Route>
                     <Route exact path='/sneakers'>
-                        <Landing 
+                        <Rewards 
                          sneakers={sneakers}
                          createSneaker={createSneaker}
                          deleteSneaker={deleteSneaker}

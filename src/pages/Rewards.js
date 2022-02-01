@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState} from 'react';
 
-function Landing(props) {
+function Rewards(props) {
     const [newSneaker, setNewSneaker] = useState({
         name: '',
         brand: '',
@@ -35,7 +35,7 @@ function Landing(props) {
                   <h1>{sneaker.name}</h1>
                   <h2>{sneaker.brand}</h2>
                   <h2>{sneaker.size}</h2>
-                  <img src={sneaker.img}/>
+                  <img src={sneaker.img} alt={sneaker.name}/>
                  </Link>
               </div>
 
@@ -74,9 +74,9 @@ function Landing(props) {
                     onChange={handleChange}
                 />
                 <br />
-                <input type='submit' value='Create Sneaker' />
+                <input type='submit' value='Upload Reward' />
             </form>
         </section>
     ) 
 };
-export default Landing;
+export default Rewards;

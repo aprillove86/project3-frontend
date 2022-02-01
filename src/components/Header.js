@@ -4,7 +4,9 @@ function Header(props) {
     return (
         <nav className='header'>
             <Link to='/'>
-                <div>Rewards You Can Afford</div>
+                <div className='title'>
+                    $(fetch) Rewards You Can Afford
+                    </div>
             </Link>
         </nav>
     )
