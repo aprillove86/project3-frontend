@@ -37,6 +37,6 @@ CLI
 ### Screenshots ###
 ![Screenshot](https://ibb.co/tPLFSY8)
 ![Screenshot2](https://i.ibb.co/ZM28Dt0/Screenshot-from-2022-02-01-17-25-17.png)
-![Screenshot3](https://ibb.co/b3JgZNj)
+![Screenshot3](https://i.ibb.co/s2snzVc/Screenshot-from-2022-02-01-19-06-07.png)
 
 
